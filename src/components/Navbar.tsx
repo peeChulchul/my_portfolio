@@ -21,10 +21,17 @@ const Navbar = () => {
   }, []);
 
   return (
-    <NavbarContainer bgColor={sticky ? theme.colors.primary : "transparent"}>
-      <PaddingContainer $top="1.2rem" $bottom="1.2rem">
+    <NavbarContainer $bgColor={sticky ? theme.colors.primary : "transparent"}>
+      <PaddingContainer
+        $left="3%"
+        $right="3%"
+        $top="1.2rem"
+        $bottom="1.2rem"
+        $responsiveLeft="1rem"
+        $responsiveRight="1rem"
+      >
         <Container>
-          <FlexContainer justify="space-between">
+          <FlexContainer $justify="space-between" $responsiveFlex>
             <Logo>Proptfolio</Logo>
 
             <MenuIcon onClick={() => setOpenMenu(true)}>

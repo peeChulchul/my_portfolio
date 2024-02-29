@@ -5,7 +5,16 @@ import { Heading, BlueText } from "stcomponents/common/typography";
 import { SkillsCard, SkillsCardContainer } from "stcomponents/sections/skillSection.styled";
 function SkillSection() {
   return (
-    <PaddingContainer $top="15%" $bottom="10%" $left="3%" id="Skills">
+    <PaddingContainer
+      $top="15%"
+      $bottom="10%"
+      $right="3%"
+      $left="3%"
+      id="Skills"
+      $responsiveLeft="1rem"
+      $responsiveRight="1rem"
+      $responsiveTop="8rem"
+    >
       <Heading size="h2" as="h2">
         My <BlueText>Skills</BlueText>
       </Heading>
@@ -14,7 +23,7 @@ function SkillSection() {
       </Heading>
       <SkillsCardContainer>
         {fron_skills.map((skill) => (
-          <SkillsCard>
+          <SkillsCard key={skill.tech}>
             <IconContainer size="5rem" color="blue">
               <skill.icon />
             </IconContainer>
@@ -29,7 +38,7 @@ function SkillSection() {
       </Heading>
       <SkillsCardContainer>
         {back_skills.map((skill) => (
-          <SkillsCard>
+          <SkillsCard key={skill.tech}>
             <IconContainer size="5rem" color="blue">
               <skill.icon />
             </IconContainer>

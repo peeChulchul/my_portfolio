@@ -4,8 +4,6 @@ import { Heading, ParaText } from "stcomponents/common/typography";
 import { FaGithub } from "react-icons/fa";
 import { ProjectImage, ProjectImageContainer, TechStackCard } from "stcomponents/sections/projectSection.styled";
 import { Button } from "stcomponents/common/button";
-
-import Project01 from "assets/yolocean.png";
 import { Iproject } from "data/projects";
 
 interface IProps {
@@ -16,7 +14,7 @@ const Project = ({ data }: IProps) => {
   return (
     <FlexContainer $fullwidthchild>
       <div>
-        <FlexContainer $align="center" gap="1rem">
+        <FlexContainer $align="center" $gap="1rem" $responsiveFlex>
           <Heading size="h3" as="h3" $bottom="1rem">
             {data.project_name}
           </Heading>
@@ -26,9 +24,9 @@ const Project = ({ data }: IProps) => {
         </FlexContainer>
 
         <PaddingContainer $top="1rme">
-          <FlexContainer gap="1.5rem">
+          <FlexContainer $gap="1.5rem">
             {data.tech_stack.map((tech) => (
-              <TechStackCard>{tech}</TechStackCard>
+              <TechStackCard key={tech}>{tech}</TechStackCard>
             ))}
           </FlexContainer>
         </PaddingContainer>

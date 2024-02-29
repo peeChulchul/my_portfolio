@@ -11,7 +11,7 @@ const Navmenu = ({ setOpenMenu }: IProps) => {
   return (
     <NevMeunContainer>
       <PaddingContainer $left="5%" $right="5%" $top="2rem">
-        <FlexContainer justify="flex-end">
+        <FlexContainer $justify="flex-end" $responsiveFlex>
           <MenuIcon onClick={() => setOpenMenu(false)}>
             <AiOutlineClose />
           </MenuIcon>
@@ -19,7 +19,7 @@ const Navmenu = ({ setOpenMenu }: IProps) => {
       </PaddingContainer>
 
       <PaddingContainer $top="8%">
-        <FlexContainer direction="column" $align="center">
+        <FlexContainer direction="column" $align="center" $responsiveFlex>
           <MenuItem href="#Home" onClick={() => setOpenMenu(false)}>
             Home
           </MenuItem>

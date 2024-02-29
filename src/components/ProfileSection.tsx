@@ -7,7 +7,16 @@ import { BlueText, Heading, ParaText } from "stcomponents/common/typography";
 import { ProfileImgCard } from "stcomponents/sections/profileSection.styled";
 const ProfileSection = () => {
   return (
-    <PaddingContainer $left="3%" $right="10%" $top="15%" $bottom="10%" id="Home">
+    <PaddingContainer
+      $left="3%"
+      $right="10%"
+      $top="15%"
+      $bottom="10%"
+      id="Home"
+      $responsiveLeft="1rem"
+      $responsiveRight="1rem"
+      $responsiveTop="8rem"
+    >
       <FlexContainer $align="center" $fullwidthchild>
         <div>
           <Heading as="h4" size="h4">
@@ -23,7 +32,7 @@ const ProfileSection = () => {
           <ParaText as="p" $top="2rem" $bottom="4rem">
             좋은코드작성을 위해 고집없이 좋은코드들을 수용하며 발전해 가는것이 저의 장점입니다.
           </ParaText>
-          <FlexContainer gap="20px">
+          <FlexContainer $gap="20px" $responsiveFlex>
             <IconContainer color="white" size="1.5rem">
               <BsGithub />
             </IconContainer>
@@ -33,7 +42,7 @@ const ProfileSection = () => {
           </FlexContainer>
         </div>
 
-        <FlexContainer justify="flex-end">
+        <FlexContainer $justify="flex-end">
           <ProfileImgCard>
             <img src={propfile} height={350} alt="profile"></img>
           </ProfileImgCard>

@@ -6,14 +6,23 @@ import Project from "./Project";
 
 const ProjectSection = () => {
   return (
-    <PaddingContainer $top="5%" $bottom="5%" $left="3%" id="Projects">
+    <PaddingContainer
+      $top="5%"
+      $bottom="5%"
+      $left="3%"
+      $right="3%"
+      id="Projects"
+      $responsiveLeft="1rem"
+      $responsiveRight="1rem"
+      $responsiveTop="20%"
+    >
       <Heading size="h2" as="h2">
         My <BlueText>Projects</BlueText>
       </Heading>
 
       {projectDetails.map((project) => (
-        <PaddingContainer $top="5rem" $bottom="5rem">
-          <Project key={project.id} data={project} />
+        <PaddingContainer key={project.id} $top="5rem" $bottom="5rem">
+          <Project data={project} />
         </PaddingContainer>
       ))}
     </PaddingContainer>

@@ -2,9 +2,6 @@ import styled from "styled-components";
 
 export const SkillsCardContainer = styled.div`
   display: flex;
-  /* grid-template-columns: auto auto; */
-  /* grid-gap: 2rem; */
-  /* padding: 0 5%; */
   gap: 2rem;
   flex-wrap: wrap;
 `;
@@ -18,4 +15,8 @@ export const SkillsCard = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.primary_light};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
 `;

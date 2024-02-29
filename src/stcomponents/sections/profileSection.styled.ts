@@ -7,4 +7,7 @@ export const ProfileImgCard = styled.div`
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
 `;

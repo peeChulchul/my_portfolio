@@ -36,4 +36,25 @@ export const Heading = styled(PaddingContainer)<IHeading>`
         return;
     }
   }};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ size }) => {
+      switch (size) {
+        case "h1":
+          return "2.5rem";
+
+        case "h2":
+          return "2rem";
+
+        case "h3":
+          return "1.5rem";
+
+        case "h4":
+          return "1rem";
+
+        default:
+          return;
+      }
+    }};
+  }
 `;

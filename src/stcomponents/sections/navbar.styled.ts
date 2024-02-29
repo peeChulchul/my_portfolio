@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface INavbarContainer {
-  bgColor: string;
+  $bgColor: string;
 }
 
 export const NavbarContainer = styled.div<INavbarContainer>`
@@ -11,7 +11,7 @@ export const NavbarContainer = styled.div<INavbarContainer>`
   left: 0%;
   z-index: 10;
   transition: all 0.3s ease-in;
-  background-color: ${({ bgColor }) => bgColor};
+  background-color: ${({ $bgColor }) => $bgColor};
 `;
 
 export const Logo = styled.p`
