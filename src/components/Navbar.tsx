@@ -4,6 +4,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { theme } from "style/theme";
 import { Logo, MenuIcon, NavbarContainer } from "stcomponents/sections/navbar.styled";
 import Navmenu from "./Navmenu";
+import { AnimatePresence } from "framer-motion";
+import { BlueText } from "stcomponents/common/typography";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -32,14 +34,16 @@ const Navbar = () => {
       >
         <Container>
           <FlexContainer $justify="space-between" $responsiveFlex>
-            <Logo>Proptfolio</Logo>
+            <Logo>
+              H.C <BlueText>Proptfolio</BlueText>
+            </Logo>
 
             <MenuIcon onClick={() => setOpenMenu(true)}>
               <GiHamburgerMenu />
             </MenuIcon>
           </FlexContainer>
         </Container>
-        {openMenu && <Navmenu setOpenMenu={setOpenMenu} />}
+        <AnimatePresence>{openMenu && <Navmenu setOpenMenu={setOpenMenu} />}</AnimatePresence>
       </PaddingContainer>
     </NavbarContainer>
   );

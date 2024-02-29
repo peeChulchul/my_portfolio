@@ -5,6 +5,8 @@ import propfile from "../assets/profile.png";
 import { PaddingContainer, FlexContainer, IconContainer } from "stcomponents/common/containers";
 import { BlueText, Heading, ParaText } from "stcomponents/common/typography";
 import { ProfileImgCard } from "stcomponents/sections/profileSection.styled";
+import { motion } from "framer-motion";
+import { fadeInLeft, fadeInRight } from "motion/motion";
 const ProfileSection = () => {
   return (
     <PaddingContainer
@@ -18,7 +20,7 @@ const ProfileSection = () => {
       $responsiveTop="8rem"
     >
       <FlexContainer $align="center" $fullwidthchild>
-        <div>
+        <motion.div variants={fadeInLeft} initial="hidden" whileInView="visible">
           <Heading as="h4" size="h4">
             방문해주셔서 감사합니다!
           </Heading>
@@ -40,9 +42,15 @@ const ProfileSection = () => {
               <SiVelog />
             </IconContainer>
           </FlexContainer>
-        </div>
+        </motion.div>
 
-        <FlexContainer $justify="flex-end">
+        <FlexContainer
+          as={motion.div}
+          variants={fadeInRight}
+          initial="hidden"
+          whileInView="visible"
+          $justify="flex-end"
+        >
           <ProfileImgCard>
             <img src={propfile} height={350} alt="profile"></img>
           </ProfileImgCard>

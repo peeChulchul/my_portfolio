@@ -5,6 +5,9 @@ import { FaGithub } from "react-icons/fa";
 import { ProjectImage, ProjectImageContainer, TechStackCard } from "stcomponents/sections/projectSection.styled";
 import { Button } from "stcomponents/common/button";
 import { Iproject } from "data/projects";
+import { wrap } from "module";
+import { motion } from "framer-motion";
+import { fadeInLeft, fadeInRight } from "motion/motion";
 
 interface IProps {
   data: Iproject;
@@ -13,7 +16,7 @@ interface IProps {
 const Project = ({ data }: IProps) => {
   return (
     <FlexContainer $fullwidthchild>
-      <div>
+      <motion.div variants={fadeInLeft} initial="hidden" whileInView="visible">
         <FlexContainer $align="center" $gap="1rem" $responsiveFlex>
           <Heading size="h3" as="h3" $bottom="1rem">
             {data.project_name}
@@ -24,7 +27,7 @@ const Project = ({ data }: IProps) => {
         </FlexContainer>
 
         <PaddingContainer $top="1rme">
-          <FlexContainer $gap="1.5rem">
+          <FlexContainer $gap="1rem" style={{ flexWrap: "wrap" }}>
             {data.tech_stack.map((tech) => (
               <TechStackCard key={tech}>{tech}</TechStackCard>
             ))}
@@ -35,8 +38,8 @@ const Project = ({ data }: IProps) => {
           {data.project_desc}
         </ParaText>
         <Button>Visit WebSite</Button>
-      </div>
-      <ProjectImageContainer>
+      </motion.div>
+      <ProjectImageContainer as={motion.div} variants={fadeInRight} initial="hidden" whileInView="visible">
         <ProjectImage src={data.project_img} alt={data.project_name} />
       </ProjectImageContainer>
     </FlexContainer>

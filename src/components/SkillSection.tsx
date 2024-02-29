@@ -1,4 +1,6 @@
 import { back_skills, fron_skills } from "data/skills";
+import { motion } from "framer-motion";
+import { fadeInLeft, fadeInTop } from "motion/motion";
 import React from "react";
 import { PaddingContainer, IconContainer } from "stcomponents/common/containers";
 import { Heading, BlueText } from "stcomponents/common/typography";
@@ -21,7 +23,7 @@ function SkillSection() {
       <Heading size="h4" as="h4" $top="1.5rem" $bottom="1.5rem">
         Front-end
       </Heading>
-      <SkillsCardContainer>
+      <SkillsCardContainer as={motion.div} variants={fadeInTop} initial="hidden" whileInView="visible">
         {fron_skills.map((skill) => (
           <SkillsCard key={skill.tech}>
             <IconContainer size="5rem" color="blue">
@@ -36,7 +38,7 @@ function SkillSection() {
       <Heading size="h4" as="h4" $top="1.5rem" $bottom="1.5rem">
         Back-end
       </Heading>
-      <SkillsCardContainer>
+      <SkillsCardContainer as={motion.div} variants={fadeInTop} initial="hidden" whileInView="visible">
         {back_skills.map((skill) => (
           <SkillsCard key={skill.tech}>
             <IconContainer size="5rem" color="blue">

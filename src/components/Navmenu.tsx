@@ -2,6 +2,8 @@ import React from "react";
 import { PaddingContainer, FlexContainer } from "stcomponents/common/containers";
 import { AiOutlineClose } from "react-icons/ai";
 import { MenuIcon, MenuItem, NevMeunContainer } from "stcomponents/sections/navbar.styled";
+import { motion } from "framer-motion";
+import { slideInLeft } from "motion/motion";
 
 interface IProps {
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -9,7 +11,7 @@ interface IProps {
 
 const Navmenu = ({ setOpenMenu }: IProps) => {
   return (
-    <NevMeunContainer>
+    <NevMeunContainer as={motion.div} initial="hidden" variants={slideInLeft} animate="visible" exit="exit">
       <PaddingContainer $left="5%" $right="5%" $top="2rem">
         <FlexContainer $justify="flex-end" $responsiveFlex>
           <MenuIcon onClick={() => setOpenMenu(false)}>
