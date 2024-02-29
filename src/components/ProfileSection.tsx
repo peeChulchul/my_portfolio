@@ -7,7 +7,7 @@ import { BlueText, Heading, ParaText } from "stcomponents/common/typography";
 import { ProfileImgCard } from "stcomponents/sections/profileSection.styled";
 const ProfileSection = () => {
   return (
-    <PaddingContainer $left="3%" $right="10%" $top="15%" $bottom="10%">
+    <PaddingContainer $left="3%" $right="10%" $top="15%" $bottom="10%" id="Home">
       <FlexContainer $align="center" $fullwidthchild>
         <div>
           <Heading as="h4" size="h4">

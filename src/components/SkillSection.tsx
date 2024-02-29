@@ -5,12 +5,12 @@ import { Heading, BlueText } from "stcomponents/common/typography";
 import { SkillsCard, SkillsCardContainer } from "stcomponents/sections/skillSection.styled";
 function SkillSection() {
   return (
-    <PaddingContainer $top="15%" $bottom="10%" $left="3%">
-      <Heading size="h4" as="h4">
-        Skills
+    <PaddingContainer $top="15%" $bottom="10%" $left="3%" id="Skills">
+      <Heading size="h2" as="h2">
+        My <BlueText>Skills</BlueText>
       </Heading>
       <Heading size="h4" as="h4" $top="1.5rem" $bottom="1.5rem">
-        <BlueText>Front-end</BlueText>
+        Front-end
       </Heading>
       <SkillsCardContainer>
         {fron_skills.map((skill) => (
@@ -25,7 +25,7 @@ function SkillSection() {
         ))}
       </SkillsCardContainer>
       <Heading size="h4" as="h4" $top="1.5rem" $bottom="1.5rem">
-        <BlueText>Back-end</BlueText>
+        Back-end
       </Heading>
       <SkillsCardContainer>
         {back_skills.map((skill) => (

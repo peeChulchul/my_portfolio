@@ -5,7 +5,8 @@ export const theme = {
     secondary: "#7eadfc",
     white: "#fff",
     black: "#000",
-    para_text_color: "#dcdcdc"
+    para_text_color: "#dcdcdc",
+    gray: "#cdcdcd"
   },
   fonts: {
     family: "Noto Sans KR",
