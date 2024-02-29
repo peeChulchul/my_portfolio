@@ -2,8 +2,9 @@ import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { SiVelog } from "react-icons/si";
 import propfile from "../assets/profile.png";
-import { PaddingContainer, FlexContainer, IconContainer, ProfileImgCard } from "stcomponents/containers";
-import { BlueText, Heading, ParaText } from "stcomponents/typography";
+import { PaddingContainer, FlexContainer, IconContainer } from "stcomponents/common/containers";
+import { BlueText, Heading, ParaText } from "stcomponents/common/typography";
+import { ProfileImgCard } from "stcomponents/sections/profileSection.styled";
 const ProfileSection = () => {
   return (
     <PaddingContainer $left="3%" $right="10%" $top="15%" $bottom="10%">
