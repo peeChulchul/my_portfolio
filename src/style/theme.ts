@@ -19,3 +19,9 @@ export const theme = {
     mobile: "720px"
   }
 };
+
+export type themeType = typeof theme;
+
+declare module "styled-components" {
+  export interface DefaultTheme extends themeType {}
+}
