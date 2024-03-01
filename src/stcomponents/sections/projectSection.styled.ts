@@ -16,6 +16,7 @@ export const TechStackCard = styled.div`
 export const ProjectImageContainer = styled.div`
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 `;
 
 export const ProjectImage = styled.img`

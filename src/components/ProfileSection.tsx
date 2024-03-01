@@ -35,10 +35,22 @@ const ProfileSection = () => {
             좋은코드작성을 위해 고집없이 좋은코드들을 수용하며 발전해 가는것이 저의 장점입니다.
           </ParaText>
           <FlexContainer $gap="20px" $responsiveFlex>
-            <IconContainer color="white" size="1.5rem">
+            <IconContainer
+              as="a"
+              target="_blank"
+              href="https://github.com/peeChulchul?tab=repositories"
+              color="white"
+              size="1.5rem"
+            >
               <BsGithub />
             </IconContainer>
-            <IconContainer color="white" size="1.5rem">
+            <IconContainer
+              as="a"
+              target="_blank"
+              href="https://velog.io/@peechulchul/posts"
+              color="white"
+              size="1.5rem"
+            >
               <SiVelog />
             </IconContainer>
           </FlexContainer>

@@ -5,7 +5,6 @@ import { FaGithub } from "react-icons/fa";
 import { ProjectImage, ProjectImageContainer, TechStackCard } from "stcomponents/sections/projectSection.styled";
 import { Button } from "stcomponents/common/button";
 import { Iproject } from "data/projects";
-import { wrap } from "module";
 import { motion } from "framer-motion";
 import { fadeInLeft, fadeInRight } from "motion/motion";
 
@@ -14,6 +13,10 @@ interface IProps {
 }
 
 const Project = ({ data }: IProps) => {
+  const onClickProjectImg = () => {
+    window.open(data.project_url, "_blank");
+  };
+
   return (
     <FlexContainer $fullwidthchild>
       <motion.div variants={fadeInLeft} initial="hidden" whileInView="visible">
@@ -21,7 +24,7 @@ const Project = ({ data }: IProps) => {
           <Heading size="h3" as="h3" $bottom="1rem">
             {data.project_name}
           </Heading>
-          <IconContainer color="blue" size="2rem">
+          <IconContainer as="a" href={data.github_url} target="_blank" color="blue" size="2rem">
             <FaGithub />
           </IconContainer>
         </FlexContainer>
@@ -37,9 +40,17 @@ const Project = ({ data }: IProps) => {
         <ParaText $top="1.5rem" $bottom="2rem">
           {data.project_desc}
         </ParaText>
-        <Button>Visit WebSite</Button>
+        <Button as="a" href={data.project_url} target="_blank">
+          Visit WebSite
+        </Button>
       </motion.div>
-      <ProjectImageContainer as={motion.div} variants={fadeInRight} initial="hidden" whileInView="visible">
+      <ProjectImageContainer
+        as={motion.div}
+        onClick={onClickProjectImg}
+        variants={fadeInRight}
+        initial="hidden"
+        whileInView="visible"
+      >
         <ProjectImage src={data.project_img} alt={data.project_name} />
       </ProjectImageContainer>
     </FlexContainer>
