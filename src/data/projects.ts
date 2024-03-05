@@ -1,6 +1,7 @@
 import yolocean from "assets/yolocean.png";
 import fanPage from "assets/fanpage.png";
 import blog from "assets/blog.png";
+import movie from "assets/movie.png";
 
 export interface Iproject {
   id: number;
@@ -41,5 +42,14 @@ export const projectDetails: Iproject[] = [
     project_img: blog,
     project_url: "https://github.com/peeChulchul/next_blog",
     github_url: "https://next-blog-liart-phi.vercel.app/"
+  },
+  {
+    id: 3,
+    project_name: "TMDB Movie",
+    project_desc: "TMDB API를 활용한 영화검색 사이트 입니다. Vanilla Javascript를 활용하여 제작하였습니다.",
+    tech_stack: ["Html", "Css", "Javascript"],
+    project_img: movie,
+    project_url: "https://s-movie-psi.vercel.app/",
+    github_url: "https://github.com/peeChulchul/s_movie"
   }
 ];
