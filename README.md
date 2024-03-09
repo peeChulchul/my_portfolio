@@ -8,5 +8,5 @@
 * 프로젝트 및 자기소개를 하기위한 포트폴리오 사이트 제작
 * Framer motion을 통해 애니메이션을 구현
 * styled-components의 Theme를 이용하여 반응형웹으로 제작
-* 
+
 ![image](https://github.com/peeChulchul/my_portfolio/assets/144536397/41065ffa-3274-45ce-be11-a59444b0c0ac)
