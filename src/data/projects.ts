@@ -45,7 +45,7 @@ export const projectDetails: Iproject[] = [
   },
   {
     id: 3,
-    project_name: "TMDB Movie",
+    project_name: "S Movie",
     project_desc: "TMDB API를 활용한 영화검색 사이트 입니다. Vanilla Javascript를 활용하여 제작하였습니다.",
     tech_stack: ["Html", "Css", "Javascript"],
     project_img: movie,

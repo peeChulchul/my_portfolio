@@ -28,6 +28,7 @@ interface IIconContainer {
 
 export const Body = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
