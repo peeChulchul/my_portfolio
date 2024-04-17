@@ -22,34 +22,42 @@ export const projectDetails: Iproject[] = [
     tech_stack: ["Nextjs", "Tailwind", "Supabase", "Zustand"],
     project_img: yolocean,
     github_url: "https://github.com/peeChulchul/yolocean",
-    project_url: "https://yolocean.store/"
+    project_url: "https://yolocean.store/",
   },
   {
     id: 1,
     project_name: "RHCP FanPage",
     project_desc:
       "RHCP의 각 맴버에게 댓글을 남길 수 있는 팬페이지 입니다. 미들웨어와 accesToken사용경험을 목표로 제작하였습니다.",
-    tech_stack: ["React", "Styled-components", "Json-server", "Redux", "Glitch"],
+    tech_stack: [
+      "React",
+      "Styled-components",
+      "Json-server",
+      "Redux",
+      "Glitch",
+    ],
     project_img: fanPage,
-    project_url: "https://s-auth-green.vercel.app/",
-    github_url: "https://github.com/peeChulchul/S_AUTH"
+    project_url: "https://rhcp-fan-page.vercel.app/",
+    github_url: "https://github.com/peeChulchul/RHCP_FanPage",
   },
   {
     id: 2,
     project_name: "Peechulchul Blog",
-    project_desc: "Nextjs를 사용하여 만든 개인블로그페이지입니다. NextJs의 기능숙달을 목표로 제작하였습니다.",
+    project_desc:
+      "Nextjs를 사용하여 만든 개인블로그페이지입니다. NextJs의 기능숙달을 목표로 제작하였습니다.",
     tech_stack: ["Nextjs", "Tailwind", "nodemailer", "react-markdown"],
     project_img: blog,
-    project_url: "https://github.com/peeChulchul/next_blog",
-    github_url: "https://next-blog-liart-phi.vercel.app/"
+    project_url: "https://next-blog-liart-phi.vercel.app/",
+    github_url: "https://github.com/peeChulchul/my_blog",
   },
   {
     id: 3,
     project_name: "S Movie",
-    project_desc: "TMDB API를 활용한 영화검색 사이트 입니다. Vanilla Javascript를 활용하여 제작하였습니다.",
+    project_desc:
+      "TMDB API를 활용한 영화검색 사이트 입니다. Vanilla Javascript를 활용하여 제작하였습니다.",
     tech_stack: ["Html", "Css", "Javascript"],
     project_img: movie,
     project_url: "https://s-movie-psi.vercel.app/",
-    github_url: "https://github.com/peeChulchul/s_movie"
-  }
+    github_url: "https://github.com/peeChulchul/s_movie",
+  },
 ];
